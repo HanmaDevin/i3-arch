@@ -64,3 +64,4 @@ python-dotenv
 python-pip
 python-pipx
 texlive
+net-tools
