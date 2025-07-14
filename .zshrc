@@ -88,6 +88,8 @@ _fzf_comprun() {
   esac
 }
 
+fastfetch -c "$HOME/.config/fastfetch/config.jsonc"
+
 # Helpful aliases
 alias  c='clear' 
 alias ls='eza -lha --icons=auto --color=always --sort=name --group-directories-first'  
