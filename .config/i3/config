@@ -25,7 +25,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id discord
 exec --no-startup-id xrandr --output DP-0 --mode 3840x2160 --primary --refresh 144
 exec --no-startup-id xrandr --output HDMI-0 --right-of DP-0 --preffered
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/gigi-AEgvTRJXm-U-unsplash.jpg
+exec --no-startup-id ~/.config/i3/wallpaper
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
