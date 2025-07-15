@@ -68,6 +68,7 @@ bindsym $mod+e exec kitty -e yazi
 bindsym Ctrl+Shift+Escape exec kitty -e btop
 bindsym $mod+b exec google-chrome-stable
 bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+v exec pavucontrol
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
