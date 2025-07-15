@@ -3,3 +3,4 @@ lazydocker
 visual-studio-code-bin
 ulauncher
 i3lock-color
+xautolock
