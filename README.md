@@ -77,6 +77,8 @@ Keybind | Action
 <kbd>Super</kbd> + <kbd>Return</kbd> | Open Terminal
 <kbd>Super</kbd> + <kbd>Q</kbd> | Kill active Window
 <kbd>Super</kbd> + <kbd>E</kbd> | Open yazi (File Manager)
+<kbd>Super</kbd> + <kbd>M</kbd> | Open Power Menu
+<kbd>Super</kbd> + <kbd>BACKSPACE</kbd> | Lock Screen
 <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> | Toggle floating Window
 <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> | Reload i3wm
 <kbd>Super</kbd> + <kbd>D</kbd> | Open Application Launcher
