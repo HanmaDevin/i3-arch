@@ -60,6 +60,7 @@ bindsym $mod+i exec kitty -e nvim ~/.config/i3/config
 
 bindsym $mod+Delete exec ~/.config/i3/lock
 bindsym $mod+Shift+v exec pavucontrol
+bindsym $mod+m exec ~/.config/rofi/powermenu/type-4/powermenu.sh
 
 # kill focused window
 bindsym $mod+q kill
