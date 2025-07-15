@@ -3,8 +3,8 @@
 
 status=$(bluetoothctl show | grep "Powered" | awk '{print $2}')
 if [ "$status" = "yes" ]; then
-    connected_devices=$(bluetoothctl devices Connected | head -n 1 | wc -l)
-    if [ "$connected_devices" -ge 1 ]; then
+    connected_devices=$(bluetoothctl devices Connected | head -n 1 | grep "Device" | wc -l)
+    if [ "$connected_devices" -gt 0 ]; then
         alias=$(bluetoothctl info | grep "Alias" | awk -F ': ' '{print $2}')
         echo " $alias"
     else
