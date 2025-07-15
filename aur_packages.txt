@@ -5,3 +5,4 @@ ulauncher
 i3lock-color
 xautolock
 ani-cli
+compton
