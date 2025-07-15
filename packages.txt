@@ -69,3 +69,4 @@ flameshot
 playerctl
 cava
 pamixer
+autotilig

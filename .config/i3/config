@@ -28,6 +28,7 @@ exec --no-startup-id xrandr --output HDMI-0 --right-of DP-0 --preffered
 exec --no-startup-id ~/.config/i3/wallpaper
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id xautolock -time 5 -locker ~/.config/i3/lock
+exec_always --no-startup-id autotiling
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -68,7 +69,6 @@ bindsym $mod+e exec kitty -e yazi
 bindsym Ctrl+Shift+Escape exec kitty -e btop
 bindsym $mod+b exec google-chrome-stable
 bindsym $mod+Shift+s exec flameshot gui
-bindsym $mod+Shift+v exec pavucontrol
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
@@ -103,10 +103,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+p split h
+# bindsym $mod+p split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -168,7 +168,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exit i3
+# bindsym $mod+Shift+e exit i3
 
 # remove title bar
 for_window [class="^.*"] border pixel 5
