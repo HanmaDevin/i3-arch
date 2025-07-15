@@ -16,10 +16,18 @@ truncate() {
 }
 
 # Get player metadata
-player=$(playerctl -l 2>/dev/null | head -n 1)
+players=($(playerctl -l 2>/dev/null | grep -o -P "^\w+"))
+player=""
+for p in "${players[@]}"; do
+  status=$(playerctl --player="$p" status 2>/dev/null)
+  if [[ "$status" == "Playing" ]]; then
+    player="$p"
+    break
+  fi
+done
 
 if [[ -z "$player" ]]; then
-  echo ""
+  echo "Nothing Playing"
   exit 0
 fi
 
@@ -35,8 +43,4 @@ title=$(truncate "$title" 10)
 
 if [[ "$status" == "Playing" ]]; then
   echo "$icon $title - $artist"
-elif [[ "$status" == "Paused" ]]; then
-  echo "$title - $artist"
-else
-  echo ""
 fi
