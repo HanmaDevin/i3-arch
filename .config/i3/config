@@ -29,7 +29,6 @@ exec --no-startup-id xrandr --output DP-0 --mode 3840x2160 --primary --refresh 1
 exec --no-startup-id xrandr --output HDMI-0 --right-of DP-0 --preffered
 exec --no-startup-id ~/.config/i3/wallpaper
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id xautolock -time 5 -locker ~/.config/i3/lock
 exec_always --no-startup-id autotiling
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -64,6 +63,7 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec kitty
 bindsym $mod+i exec kitty -e nvim ~/.config/i3/config
+bindsym $mod+BackSpace exec ~/.config/i3/lock
 
 bindsym $mod+Delete exec ~/.config/i3/lock
 bindsym $mod+Shift+v exec pavucontrol
