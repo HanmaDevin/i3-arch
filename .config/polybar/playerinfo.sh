@@ -38,8 +38,8 @@ title=$(playerctl --player=$player metadata title 2>/dev/null)
 icon="${icons[$player]:-${icons["default"]}}"
 
 # Truncate artist and title to 10 chars
-artist=$(truncate "$artist" 10)
-title=$(truncate "$title" 10)
+artist=$(truncate "$artist" 15)
+title=$(truncate "$title" 15)
 
 if [[ "$status" == "Playing" ]]; then
   echo "$icon $title - $artist"
