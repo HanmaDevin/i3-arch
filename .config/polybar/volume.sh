@@ -13,12 +13,16 @@ bar+=$(printf '█%.0s' $(seq 1 $filled))
 bar+=$(printf '░%.0s' $(seq 1 $empty))
 bar+=']'
 
+if [[ $volume -eq 100 ]]; then
+    bar="[██████████]"
+fi
+
 # Get mute status
 muted=$(pamixer --get-mute)
 
 if [[ "$muted" == "true" ]]; then
-    icon="ﱝ"
-    echo "$icon Muted"
+    icon=""
+    echo "$icon"
 else
     icon=""
     echo "$icon $bar $volume%"
