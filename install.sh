@@ -24,6 +24,21 @@ installYay() {
     echo ":: yay has been installed successfully."
 }
 
+detect_nvidia() {
+  gpu=$(lspci | grep -i '.* vga .* nvidia .*')
+
+  shopt -s nocasematch
+
+  if [[ $gpu == *' nvidia '* ]]; then
+    echo "Nvidia GPU is present"
+    gum spin --spinner dot --title "Installaling nvidia drivers now..." -- sleep 2
+    sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+  else
+    echo "It seems you are not using a Nvidia GPU"
+    echo "If you have a Nvidia GPU then download the drivers yourself please :)"
+  fi
+}
+
 config_ufw() {
   gum spin --spinner dot --title "Firewall will be configured..." -- sleep 2
   sudo ufw enable
@@ -60,7 +75,7 @@ copy_config() {
 }
 
 installDeepCoolDriver() {
-  echo "Do you want to install DeepCool driver?"
+  echo "Do you want to install DeepCool CPU-Fan driver?"
   deepcool=$(gum choose "Yes" "No")
   if [[ "$deepcool" == "Yes" ]]; then
     sudo cp "$location/DeepCool/deepcool-digital-linux" "/usr/sbin"
@@ -129,6 +144,7 @@ installAurPackages
 gum spin --spinner dot --title "Starting setup now..." -- sleep 2
 copy_config
 installVencord
+detect_nvidia
 installDeepCoolDriver
 configure_git
 config_ufw
