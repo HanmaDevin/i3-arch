@@ -42,7 +42,7 @@ I also added the keybind `$mod+i` to open the i3 config file in neovim so you ca
 > This configuration is aimed towards __arch users btw__ :neckbeard: with a new installation.
 
 ## Screenshots
-![Screenshot](https://raw.githubusercontent.com/HanmaDevin/i3-arch/master/img/2025-07-15_22-37-57_FlameShot.png)
+![Screenshot](https://raw.githubusercontent.com/HanmaDevin/i3-arch/master/img/2025-07-16_12-51-05_FlameShot.png)
 
 ## Installation
 
