@@ -71,3 +71,4 @@ cava
 pamixer
 autotilig
 dunst
+ly

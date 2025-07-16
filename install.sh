@@ -70,6 +70,7 @@ copy_config() {
   cp "$location/.xinitrc" "$HOME/"
 
   sudo cp "$location/etc/pacman.conf" "/etc/"
+  sudo cp -r "$location/etc/ly" "/etc/"
   sudo cp -r "$location/icons/" "/usr/share/"
   sudo cp -r "$location/themes/" "/usr/share"
 }
