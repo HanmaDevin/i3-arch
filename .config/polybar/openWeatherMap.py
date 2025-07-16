@@ -82,7 +82,7 @@ def main():
     location = get_temperature("Toenisvorst")
     code = location["weather"][0]["icon"]
     icon = icons[code]
-    data["text"] = icon + " " + str(math.ceil(location["main"]["temp"])) + "°C"
+    data["text"] = icon + str(math.ceil(location["main"]["temp"])) + "°C"
     print(data["text"])
 
 
