@@ -22,7 +22,7 @@ while true; do
  
   # Apply the selected wallpaper
   feh --bg-fill "$WALLPAPER"
-  # For hyprlock to have the same Background
+  # For powermenu to have the same Background
   cp $WALLPAPER ~/.current_wallpaper
   sleep 600
 done

@@ -167,9 +167,9 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-assign [class="discord"] 1
 assign [class="kitty"] 2
 assign [class="Google-chrome"] 3
+assign [class="discord"] 1
 assign [class="steam"] 5
 
 # reload the configuration file
@@ -242,7 +242,7 @@ set $mantle #181825
 set $crust #11111b
 
 # target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
+client.focused           $lavender $base $text  $rosewater $mauve
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
 client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
