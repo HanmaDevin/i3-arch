@@ -11,7 +11,7 @@ from pathlib import Path
 import os
 import json
 
-env_path = "/home/devin/.env"
+env_path = os.getenv("HOME") + "/.env"
 load_dotenv(env_path)
 
 base_url = "http://api.openweathermap.org/data/2.5/weather"
