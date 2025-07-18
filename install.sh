@@ -73,6 +73,7 @@ copy_config() {
   sudo cp -r "$location/etc/ly" "/etc/"
   sudo cp -r "$location/icons/" "/usr/share/"
   sudo cp -r "$location/themes/" "/usr/share"
+  sudo cp "$location/.config/polybar/weatherInfo" "/usr/bin"
 }
 
 installDeepCoolDriver() {
