@@ -58,7 +58,7 @@ cd $HOME/i3-arch/
 ```
 
 ```bash
-./install.sh
+./scripts/install.sh
 ```
 
 

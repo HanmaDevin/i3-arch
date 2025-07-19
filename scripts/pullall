@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This script aims to traverse all subdirectories and execute 'git pull' in each one.
+
+dirs=$(fd --exclude "go" --exclude "yay" --exclude ".vscode" --exclude ".local" -H "^(\.git)$" ~ --exec echo {//})
+
+for dir in $dirs; do
+    if [ -d "$dir" ]; then
+        echo "Pulling updates in: $dir"
+        cd "$dir"
+        git pull
+        cd - > /dev/null
+    else
+        echo "Directory $dir does not exist."
+    fi
+done
+
+notify-send "Git Pull Completed" "All repositories have been updated."
